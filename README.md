@@ -10,7 +10,9 @@ pip3 install pyserial
 ```
 
 ## Protocol:
-The protocol class is found at [src/pelco_d.py](src/pelco_d.py). The class only contains pre-made methods for `set_preset_85` (WIPER ON) and `set_preset_86` (WIPER OFF) for the VideoTec case (according to the documentation here: [MAXIMUS MHX, MAXIMUS MHXT](https://www.videotec.com/dep/ekr/Manuali/MAXIMUS-MHX_MAXIMUS-MHXT_Manual.pdf#MNVCMHX_1706_EN.indd%3A.16516%3A139))
+The protocol class is found at [src/pelco_d.py](src/pelco_d.py). The class only contains pre-made methods for `set_preset_85` (WIPER ON) and `set_preset_86` (WIPER OFF) for the Videotec case (according to the documentation here: [Videotec commands document](https://www.videotec.com/dep/ekr/Manuali/MAXIMUS-MHX_MAXIMUS-MHXT_With-integrated-camera_1409.pdf)
+
+The Videotec case is documented here: [MAXIMUS MHX, MAXIMUS MHXT](https://www.videotec.com/dep/ekr/Manuali/MAXIMUS-MHX_MAXIMUS-MHXT_Manual.pdf#MNVCMHX_1706_EN.indd%3A.16516%3A139)
 
 The class was constructed from this tutorial here: https://www.commfront.com/pages/pelco-d-protocol-tutorial
 

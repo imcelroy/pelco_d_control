@@ -35,7 +35,8 @@ class PelcoDControlNode():
         self.subscriber = rospy.Subscriber(self.command_topic, Bool, self.command_cb, queue_size=1)
 
         self.protocol = PelcoDProtocol(self.device_address)
-        print(self.mocked)
+
+        # parity, stopbits, bytesize can be modified here!
         self.serial = SerialCommInterface(self.port, self.mocked, baudrate=self.baudrate)
 
         # try to open connection
@@ -47,11 +48,11 @@ class PelcoDControlNode():
     def command_cb(self, msg):
         if msg.data:
             cmd = self.protocol.construct_set_preset_85()
-            rospy.loginfo("Pelcon-d node opening wiper, sending command: {}". format(cmd))
+            rospy.loginfo("Pelcon-d node start wiper, sending command: {}". format(cmd))
             self.serial.write(cmd)
         else:
             cmd = self.protocol.construct_set_preset_86()
-            rospy.loginfo("Pelcon-d node closing wiper, sending command: {}". format(cmd))
+            rospy.loginfo("Pelcon-d node stop wiper, sending command: {}". format(cmd))
             self.serial.write(cmd)
 
     def work(self):
