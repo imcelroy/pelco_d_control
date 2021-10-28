@@ -1,5 +1,14 @@
 # PELCO_D control Package
 
+## Dependencies
+
+This package uses [PySerial](https://github.com/pyserial/pyserial).
+
+Install with:
+```
+pip3 install pyserial
+```
+
 ## Protocol:
 The protocol class is found at [src/pelco_d.py](src/pelco_d.py). The class only contains pre-made methods for `set_preset_85` (WIPER ON) and `set_preset_86` (WIPER OFF) for the VideoTec case (according to the documentation here: [MAXIMUS MHX, MAXIMUS MHXT](https://www.videotec.com/dep/ekr/Manuali/MAXIMUS-MHX_MAXIMUS-MHXT_Manual.pdf#MNVCMHX_1706_EN.indd%3A.16516%3A139))
 
