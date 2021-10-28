@@ -1,0 +1,9 @@
+<launch>
+    <node name="pelco_d_control" pkg="pelco_d_control" type="pelco_d_control_node.py" output="screen">
+        <param name="device_address" type="string" value="\x01"/>
+        <param name="port" type="string" value="/dev/RS485_0"/>
+        <param name="baudrate" type="int" value="9600"/>
+        <param name="mocked" type="bool" value="False"/>
+        <param name="topic" type="string" value="pelco_d_cmd"/>
+    </node>
+</launch>
