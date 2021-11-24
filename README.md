@@ -14,7 +14,7 @@ The protocol class is found at [src/pelco_d.py](src/pelco_d.py). The class only 
 
 The Videotec case is documented here: [MAXIMUS MHX, MAXIMUS MHXT](https://www.videotec.com/dep/ekr/Manuali/MAXIMUS-MHX_MAXIMUS-MHXT_Manual.pdf#MNVCMHX_1706_EN.indd%3A.16516%3A139)
 
-The class was constructed from this tutorial here: https://www.commfront.com/pages/pelco-d-protocol-tutorial
+The class was constructed from these tutorials here: https://www.commfront.com/pages/pelco-d-protocol-tutorial and https://www.serialporttool.com/sptblog/?p=4830
 
 ## Architecture
 

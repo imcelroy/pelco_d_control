@@ -23,9 +23,9 @@ class PelcoDProtocol():
         self.sync_byte = '\xFF'
 
         # preset 85 (WIPER ON)
-        self.set_preset_85 = '\x55'
+        self.preset_85 = '\x55'
         # preset 86 (WIPER OFF)
-        self.set_preset_86 = '\x56'
+        self.preset_86 = '\x56'
 
     def construct_cmd(self, byte3, byte4, byte5, byte6):
         '''
@@ -56,19 +56,11 @@ class PelcoDProtocol():
             set preset 85 for device
             (should be Wiper ON)
         '''
-        byte3 = '\x00'
-        byte4 = '\x07'
-        byte5 = '\x00'
-        byte6 = self.set_preset_85
-        return self.construct_cmd(byte3, byte4, byte5, byte6)
+        return self.construct_cmd('\x00', '\x03', '\x00', self.preset_85)
 
     def construct_set_preset_86(self):
         '''
             set preset 86 for device
             (should be Wiper OFF)
         '''
-        byte3 = '\x00'
-        byte4 = '\x07'
-        byte5 = '\x00'
-        byte6 = self.set_preset_86
-        return self.construct_cmd(byte3, byte4, byte5, byte6)
+        return self.construct_cmd('\x00', '\x03', '\x00', self.preset_86)
